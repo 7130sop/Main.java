@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class RevStr
 {
     public static StringBuilder Rev(String Str)
@@ -12,11 +14,25 @@ public class RevStr
         return SB;
     }
 
+    public static StringBuilder SortAlphabat(String Str)
+    {
+        Str = Str.replace(" ","");
+        Str = Str.toLowerCase();
+        StringBuilder SB = new StringBuilder();
+        char ChArr[] = Str.toCharArray();
+        Arrays.sort(ChArr);
+        for (char ch:ChArr)
+        {
+            SB.append(ch);
+        }
+        return SB;
+    }
+
     public static void main(String []args)
     {
         String Str = "Radha Krsna" ;
 
-        System.out.println(Rev(Str));
+        System.out.println(SortAlphabat(Str));
     }
 
 }
